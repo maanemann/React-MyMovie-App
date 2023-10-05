@@ -9,14 +9,14 @@ import axios from "axios";
 const ListView = () => {
   return (
     <>
-      <header className="gridContainer header">
+      <header className="gridContainer header dark:bg-black">
         <Switch justify="end" align="center" />
-        <Heading title="MyMovies" size="16" as="h1" />
+        <Heading title="MyMovies" size="16" as="h1" className="dark:text-white" />
       </header>
-      <main>
+      <main className="dark:bg-black">
         <section className="HorizontalMovieListContainer">
           <div className="flexContainer justify-space-between">
-            <Heading title="Now Showing" size="16" as="h2" />
+            <Heading title="Now Showing" size="16" as="h2" className="dark:text-white" />
             <Button title="See More" />
           </div>
           <div className="flexContainer movieCardContainerLayout">
@@ -24,8 +24,8 @@ const ListView = () => {
           </div>
         </section>
         <section className="VerticalMovieListContainer">
-          <div className="flexContainer justify-space-between VerticalMovieListTitleLayout">
-            <Heading title="Popular" size="16" as="h2" />
+          <div className="flexContainer justify-space-between VerticalMovieListTitleLayout dark:bg-black">
+            <Heading title="Popular" size="16" as="h2" className="dark:text-white" />
             <Button title="See More" />
           </div>
           <div className="flexContainer movieListContainerLayout">

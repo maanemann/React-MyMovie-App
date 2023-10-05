@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { FaRegBookmark } from "react-icons/fa";
 import Heading from "../components/Heading";
+import FavoritesIcon from "../components/FavoritesIcon";
 import Rating from "../components/Rating";
 import Label from "../components/Label";
 
@@ -8,10 +8,6 @@ const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
   gap: 12px;
-`;
-const StyledFaRegBookmark = styled(FaRegBookmark)`
-  align-self: top;
-  padding-left: 25px;
 `;
 const StyledGridSection = styled.section`
   display: grid;
@@ -32,7 +28,7 @@ const MovieInfo = ({ data }) => {
     <StyledSection>
       <div className="flexContainer justify-space-between">
         <Heading title={data.title} size="20" as="h1" />
-        <StyledFaRegBookmark />
+        <FavoritesIcon />
       </div>
       <Rating voteAverage={data.vote_average} />
       <StyledFlexSection>

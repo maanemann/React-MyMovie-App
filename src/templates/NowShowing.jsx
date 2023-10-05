@@ -26,7 +26,7 @@ const NowShowing = () => {
                 alt="Cover Image"
               />
             </figure>
-            <Heading
+            <Heading className="dark:text-white"
               title={
                 data.title.length > 25
                   ? data.title.split(" ").slice(0, 3).join(" ") + "..."

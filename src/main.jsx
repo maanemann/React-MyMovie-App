@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import DetailsView from "./pages/DetailsView";
 import ListView from "./pages/ListView";
+import BookmarksView from "./pages/BookmarksView";
 import ErrorView from "./pages/ErrorView";
 import {
   createBrowserRouter,
@@ -12,6 +13,7 @@ import {
 } from "react-router-dom";
 import { ListViewData } from "./pages/ListView";
 import { DetailsViewData } from "./pages/DetailsView";
+// import { BookmarksViewData } from "./pages/BookmarksView";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +23,11 @@ const router = createBrowserRouter(
         path="/details/:id"
         loader={DetailsViewData}
         element={<DetailsView />}
+      />
+      <Route
+        path="/bookmarks"
+        // loader={BookmarksViewData}
+        element={<BookmarksView />}
       />
     </Route>
   )
