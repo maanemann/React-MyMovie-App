@@ -1,5 +1,6 @@
 import { FaFilm, FaRegBookmark, FaTicketAlt } from "react-icons/fa";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -18,10 +19,15 @@ const StyledNav = styled.nav`
 const Navigation = () => {
   return (
     <StyledNav className="dark:bg-black">
-      <FaFilm />
-      <FaTicketAlt />
-      <FaRegBookmark />
-    </StyledNav>
+        <Link to={'/'} className="text-mm_gray pt-1.5">
+          <FaFilm />
+        </Link>
+        <FaTicketAlt />
+        {/* Farven "mm_gray" er tilføjet i tailwind.config.js */}
+        <Link to={'/favorite'} className="text-mm_gray pt-1.5">
+          <FaRegBookmark />
+        </Link>
+      </StyledNav>
   );
 };
 
